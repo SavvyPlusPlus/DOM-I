@@ -44,16 +44,20 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //NAVIGATION START
 const navAnch = document.querySelectorAll('nav a')
 
+//NAV-STYLE-START
 navAnch.forEach((anchor, index) => {
   anchor.textContent = siteContent ['nav']['nav-item-' + (index + 1)]
+  anchor.style.color = "green"
 })
+
+
 //Alternative
-// avAnch[0].textContent = siteContent['nav']['nav-item-1']
-// avAnch[1].textContent = siteContent['nav']['nav-item-2']
-// avAnch[2].textContent = siteContent['nav']['nav-item-3']
+// navAnch[0].textContent = siteContent['nav']['nav-item-1']
+// navAnch[1].textContent = siteContent['nav']['nav-item-2']
+// navAnch[2].textContent = siteContent['nav']['nav-item-3']
 // avAnch[3].textContent = siteContent['nav']['nav-item-4']
-// avAnch[4].textContent = siteContent['nav']['nav-item-5']
-// avAnch[5].textContent = siteContent['nav']['nav-item-6']
+// navAnch[4].textContent = siteContent['nav']['nav-item-5']
+// navAnch[5].textContent = siteContent['nav']['nav-item-6']
 //NAVIGATION END
 
 //HEADER IMAGE
@@ -114,3 +118,18 @@ let footPar = document.querySelector('footer p')
 footPar.textContent = siteContent['footer']['copyright']
 
 
+//NEW CONTENT
+const galLink = document.createElement('a')
+const nav = document.querySelector('nav')
+
+galLink.textContent = 'Gallery'
+galLink.setAttribute('href', "#")
+galLink.style.color = "green"
+nav.appendChild(galLink)
+
+const homeLink = document.createElement('a')
+homeLink.textContent = 'Careers'
+homeLink.style.color = "teal"
+document.querySelector("nav").appendChild(homeLink)
+
+//prepend ;-) DEPENDS
